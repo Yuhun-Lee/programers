@@ -17,10 +17,10 @@ def solution(numbers, hand):
             left_way = abs(current_left[0] - location[num][0]) + abs(current_left[1] - location[num][1])
             right_way = abs(current_right[0] - location[num][0]) + abs(current_right[1] - location[num][1])
             if left_way == right_way:
-                if hand[0].upper() == 'L':  # hand == 'left' 이게 더 낫겠군
+                if hand == 'left':
                     answer += 'L'
                     current_left = location[num]
-                elif hand[0].upper() == 'R':
+                elif hand == 'right':
                     answer += 'R'
                     current_right = location[num]
             elif left_way < right_way:

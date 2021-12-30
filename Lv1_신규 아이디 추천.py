@@ -11,11 +11,9 @@ def solution(new_id):
             pass
     answer = temp
     # 3
-    while True:
-        if answer.find('..') != -1:
-            answer = answer.replace('..', '.')
-        else:
-            break
+
+    answer = answer.replace('..', '.')
+
     # 4
     while True:
         if len(answer) > 0:
@@ -50,6 +48,6 @@ def solution(new_id):
 
 print(solution('...!@BaT#*..y.abcdefghijklm'))
 print(solution('z-+.^.'))
-print(solution(	"=.="))
+print(solution("=.="))
 print(solution("123_.def"))
 print(solution("abcdefghijklmn.p"))
