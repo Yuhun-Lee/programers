@@ -1,9 +1,5 @@
 import Foundation
 
-var a: String = "abcd"
-
-var b = a.reversed()
-var c: [String] = ["a","b","c","d"]
-
-print(Array(c.reversed())) // ["d", "c", "b", "a"]
-print(String(b)) // dcba
+var a: Int = 3
+var result: Double = pow(2.0, a); // 8
+print(result)
