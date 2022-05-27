@@ -1,15 +1,9 @@
 import Foundation
 
-func solution(_ left:Int, _ right:Int) -> Int {
-    var sum: Int = 0;
-    
-    (left...right).map { a in
-        print(a)
-        print(type(of: a))
-        
-    }
-    
-    return sum
-}
+var a: String = "abcd"
 
-print(solution(5, 8))
+var b = a.reversed()
+var c: [String] = ["a","b","c","d"]
+
+print(Array(c.reversed())) // ["d", "c", "b", "a"]
+print(String(b)) // dcba
