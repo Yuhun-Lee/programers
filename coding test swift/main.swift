@@ -1,15 +1,7 @@
-func solution(_ a:Int, _ b:Int) -> String {
-    var dateDic:[Int:Int] = [0:0, 1:31, 2:29, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31]
-    var d: [Int:String] = [1:"FRI", 2:"SAT", 3:"SUN", 4:"MON", 5:"TUE", 6:"WED", 0:"THU"]
-    var day: Int = 0
-    
-    for i in 0..<a {
-        day += dateDic[i]!
-        print(dateDic[i])
-    }
-    day += b
-    
-    return d[day%7]!
-}
+var a:Int = 16
+print(String(a,radix: 2)) // 10000
+print(String(a,radix: 8)) // 20
+print(String(a,radix: 16)) // 10
 
-print(solution(5, 24))
+var b:String = "1100"
+print(Int(b,radix: 2)!) // 1
