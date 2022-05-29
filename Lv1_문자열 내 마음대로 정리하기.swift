@@ -13,10 +13,9 @@ func solution(_ strings:[String], _ n:Int) -> [String] {
     }
     
     for key in dic.keys.sorted() {
-        result = result + dic[key]!
+        guard let t = dic[key] as? [String] else {continue}
+        result = result + t
     }
     
     return result
 }
-
-print(solution(["sun", "bed", "car"], 1))
