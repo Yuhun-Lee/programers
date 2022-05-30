@@ -1,5 +1,4 @@
-let arr:[String] = ["a","b","c","d","e"]
+let arr:[String] = ["hello", "world", "hi", "hello"]
+print(arr.firstIndex(of: "hello"))
 
-for (index, value) in arr.enumerated() {
-    print("인덱스는 \(index)이고, 값은 \(value)입니다.")
-}
+print(type(of: (0...3).map({$0})))
