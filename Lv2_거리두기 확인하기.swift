@@ -26,17 +26,22 @@ func solution(_ places:[[String]]) -> [Int] {
             }
         }
 
+        if pointP.isEmpty {
+            result.append(check)
+            continue
+        }
         
         var isZero:Bool = false
-        for i in 0...3 {
+        for i in 0..<pointP.count-1 {
             if isZero {break}
-            for j in i+1...4 {
+            for j in i+1..<pointP.count {
                 let x1 = pointP[i][0]
                 let y1 = pointP[i][1]
                 let x2 = pointP[j][0]
                 let y2 = pointP[j][1]
-                 let counter:Int = abs(x1-x2) + abs(y1-y2)
-                 if counter == 1 {
+                
+                let counter:Int = abs(x1-x2) + abs(y1-y2)
+                if counter == 1 {
                      check = 0
                      isZero = true
                      break
@@ -58,7 +63,7 @@ func solution(_ places:[[String]]) -> [Int] {
                          }
                      }
                      else { // 대각의 경우
-                         if arr[min(x1,x2)][max(y1,y2)] != "X" || arr[max(x1,x2)][min(y1,y2)] != "X" {
+                         if arr[x1][y2] != "X" || arr[x2][y1] != "X" {
                              check = 0
                              isZero = true
                              break
@@ -74,5 +79,3 @@ func solution(_ places:[[String]]) -> [Int] {
     
     return result
 }
-
-print(solution([["POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"], ["POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"], ["PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"], ["OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"], ["PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"]]))
