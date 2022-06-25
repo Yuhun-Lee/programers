@@ -1,10 +1,23 @@
-let a = ["a","b","a","c","d"]
-
-for i in 0..<10 {
-    for j in a {
-        print(j)
-        if j == "b"{
-            break
-        }
+struct exS {
+    var a:Int = 1
+    
+    func pa () {
+        print(a)
     }
 }
+
+class exC {
+    var a:Int = 2
+    
+    func pa() {
+        print(a)
+    }
+}
+
+let ls:exS = exS()
+var vs:exS = exS()
+vs.a = 3
+
+let lc:exC = exC()
+lc.a = 5
+lc.pa()
