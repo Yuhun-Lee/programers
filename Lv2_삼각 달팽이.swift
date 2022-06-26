@@ -21,14 +21,13 @@ func solution(_ n:Int) -> [Int] {
     var counter:Int = 2
     
     while counter != total+1 {
-        
         // 아래로
         for _ in 0..<downCount {
             row += 1
+            if triangle[row][column] != 0 {row -= 1; break}
             triangle[row][column] = counter
             counter += 1
-            print(triangle)
-        }
+        }   
         downCount -= 2
         
         // 오른쪽으로
@@ -36,25 +35,20 @@ func solution(_ n:Int) -> [Int] {
             column += 1
             triangle[row][column] = counter
             counter += 1
-            print(triangle)
         }
         rightCount -= 3
         
         if upCount < 1 {break}
+        
         // 위로
         for _ in 0..<upCount {
             row -= 1
             column -= 1
             triangle[row][column] = counter
             counter += 1
-            print(triangle)
         }
         upCount -= 3
-        
     }
-    
     
     return triangle.flatMap{$0}
 }
-
-print(solution(12))
