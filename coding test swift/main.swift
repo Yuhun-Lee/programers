@@ -1,5 +1,3 @@
-struct A {
-    var v:Int = 1
-}
-
+let s:Character = "A"
+print(s.isLowercase)
 
